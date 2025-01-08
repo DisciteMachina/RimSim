@@ -3,4 +3,7 @@
 import javax.swing.*;
 
 public class Main {
-    public static v
+    public static void main (String[] args) {
+        new Board();
+    }
+}
