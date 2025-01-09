@@ -36,7 +36,12 @@ public class Board extends Canvas {
             overLapping = false;
 
             for (Tree tree : trees) {
-                if (newTree.getBounds().intersects(tree.getBounds())) {
+                if (newTree.getFoliageBounds().intersects(tree.getFoliageBounds())) {
+                    overLapping = true;
+                    break;
+                }
+
+                if (newTree.getTrunkBounds().intersects(tree.getFoliageBounds())) {
                     overLapping = true;
                     break;
                 }
